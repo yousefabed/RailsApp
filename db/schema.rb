@@ -11,14 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120704100756) do
+ActiveRecord::Schema.define(:version => 20120706000427) do
 
-  create_table "orders", :force => true do |t|
-    t.string   "order_name"
-    t.date     "order_date"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+# Could not dump table "orders" because of following StandardError
+#   Unknown type 'ineger' for column 'user_id'
 
   create_table "users", :force => true do |t|
     t.string   "first_name"

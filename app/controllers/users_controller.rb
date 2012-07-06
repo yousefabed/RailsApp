@@ -14,10 +14,10 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-
+    @order = @user.order.all
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @user }
+      format.json { render json:  @user.to_json(:include => :order) }
        format.xml { render xml: @user }
     end
   end

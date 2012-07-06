@@ -19,7 +19,22 @@
   <b>Phone number:</b>
   <%= @user.phone_number %>
 </p>
-
+<p>
+  <b>Number of orders</b>
+   <%= @order.count %>  
+   <table>
+  <tr>
+    <th>Order name </th>
+    <th>Order date</th>
+    <% @order.each do |order| %>
+  <tr>
+    <td><%= order.order_name %></td>
+    <td><%= order.order_date %></td>
+      </tr>
+<% end %>
+</table>
+</p>
+    
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
