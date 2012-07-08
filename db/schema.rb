@@ -13,8 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20120706000427) do
 
-# Could not dump table "orders" because of following StandardError
-#   Unknown type 'ineger' for column 'user_id'
+  create_table "orders", :force => true do |t|
+    t.string   "order_name"
+    t.date     "order_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"

@@ -24,13 +24,18 @@ gem 'jquery-rails'
 
 
 group :test, :development do
-    gem 'sqlite3'
+    gem 'pg'
+    #gem 'sqlite3'
 	gem 'turn'
 	gem 'rspec-rails'
 	gem 'capybara'
 	gem 'guard-rspec'
 	gem 'growl_notify'
 	gem 'launchy'
+end
+
+group :production do
+	gem 'pg'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
